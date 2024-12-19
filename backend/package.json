@@ -1,0 +1,14 @@
+{
+  "name": "counter",
+  "version": "1.0.0",
+  "description": "conter app with socket",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./src/server/socket.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  }
+}
