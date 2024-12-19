@@ -9,11 +9,13 @@ import {
 import { Button } from "./components/ui/button";
 import { cardsData } from "./data/cards";
 import { Link } from "react-router";
+import { Alert, AlertDescription, AlertTitle } from "./components/ui/alert";
+import { Terminal } from "lucide-react";
 
 function App() {
   return (
     <div className="bg-background text-foreground">
-      <div className="flex gap-3">
+      <div className="flex gap-3 mb-16">
         {cardsData.map((card) => (
           <div className="w-1/2" key={card.key}>
             <Card className="bg-zinc-950 text-white">
@@ -34,6 +36,15 @@ function App() {
           </div>
         ))}
       </div>
+
+      <Alert>
+        <Terminal className="h-4 w-4" />
+        <AlertTitle>Heads up!</AlertTitle>
+        <AlertDescription>
+          Open the same url on different window to see the bi-directional
+          communication
+        </AlertDescription>
+      </Alert>
     </div>
   );
 }
