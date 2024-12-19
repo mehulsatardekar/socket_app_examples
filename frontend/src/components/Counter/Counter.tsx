@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { io } from "socket.io-client";
 import { Button } from "../ui/button";
-
-// Connect to the server
-const socket = io("http://localhost:4000", {
-  transports: ["websocket", "polling"], // Explicitly specify transports
-});
+import { socket } from "../../lib/utils";
 
 const Counter = () => {
   const [counter, setCounter] = useState(0);

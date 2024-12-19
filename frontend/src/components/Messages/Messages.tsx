@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { io } from "socket.io-client";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
+import { socket } from "../../lib/utils";
 
 // Connect to the server
-const socket = io("http://localhost:4000", {
-  transports: ["websocket", "polling"], // Explicitly specify transports
-});
 
 function Messages() {
   const [message, setMessage] = useState("");
